@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieNight | Find Your Next Film</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Small custom touch for the scrollbar to match the dark theme */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111827; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans min-h-screen">
+
+    <nav class="border-b border-gray-800 p-6 mb-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-black tracking-tighter text-blue-500 uppercase">
+                Movie<span class="text-white">Night</span>
+            </h1>
+            <div id="userGreeting" class="text-sm font-medium text-gray-400">
+                </div>
+        </div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto px-6 mb-12 text-center">
+        <h2 id="mainHeading" class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">
+            Unlimited movies, TV <br> shows, and more.
+        </h2>
+        <p class="text-gray-400 text-lg mb-8">Ready to watch? Search for a title below.</p>
+        
+        <div class="relative max-w-2xl mx-auto">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search for your favorite movies here..." 
+                class="w-full py-4 px-6 rounded-full bg-gray-900 border-2 border-gray-800 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/20 transition-all text-white text-lg shadow-2xl"
+            />
+            <span class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-500">
+                🔍
+            </span>
+        </div>
+    </header>
+
+    <section id="statusArea" class="max-w-6xl mx-auto px-6 mb-8 text-center min-h-[40px]">
+        <p class="text-gray-500 italic">Enter a movie title to get started...</p>
+    </section>
+
+       <main class="max-w-6xl mx-auto px-6 pb-20">
+        <div id="movieGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            
+            <div class="group cursor-pointer">
+                <div class="relative overflow-hidden rounded-xl aspect-[2/3] bg-gray-900 border border-gray-800 shadow-lg">
+                    <img src="https://via.placeholder.com/300x450?text=Movie+Poster" alt="Placeholder" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <button class="w-full py-2 bg-blue-600 text-white rounded font-bold text-sm">View Details</button>
+                    </div>
+                </div>
+                <h3 class="mt-3 font-semibold text-gray-200 truncate">Example Movie Title</h3>
+                <p class="text-sm text-gray-500">2024</p>
+            </div>
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+</html>
