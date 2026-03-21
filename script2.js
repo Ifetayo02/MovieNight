@@ -14,7 +14,7 @@ const initializeUser = () => {
 initializeUser();
 
 const TMDB_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNTJiMWQyNWQ4OTdkYjU2MDA1YWY2YmRmZmEwNDg2NSIsIm5iZiI6MTc3MzEzNzYwNS44NDA5OTk4LCJzdWIiOiI2OWFmZWVjNTJjOTJjYTg5Y2ZjMWViYjUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.qoCm2J_A3aqi7Tat-_4rRaRkC5ZaYxdEGMikswbp31s';
-const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w342';
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 
 const queryInput = document.getElementById('searchInput');
