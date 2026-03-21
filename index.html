@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieNight | Find Your Next Film</title>
-    
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <script src="script2.js" defer></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        /* Small custom touch for the scrollbar to match the dark theme */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #111827; }
         ::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 min-h-screen">
+<body class="bg-gray-950 text-gray-100 font-sans min-h-screen">
+
     <nav class="border-b border-gray-800 p-6 mb-8">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-black tracking-tighter text-blue-500 uppercase">
                 Movie<span class="text-white">Night</span>
             </h1>
-            <div id="userGreeting" class="text-sm font-medium text-gray-400"></div>
+            <div id="userGreeting" class="text-sm font-medium text-gray-400">
+                </div>
         </div>
     </nav>
 
@@ -38,10 +35,12 @@
             <input 
                 type="text" 
                 id="searchInput" 
-                placeholder="Search for your favorite movies..." 
-                class="w-full py-4 px-6 rounded-full bg-gray-900 border-2 border-gray-800 focus:border-blue-500 focus:outline-none transition-all text-white text-lg shadow-2xl"
+                placeholder="Search for your favorite movies here..." 
+                class="w-full py-4 px-6 rounded-full bg-gray-900 border-2 border-gray-800 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/20 transition-all text-white text-lg shadow-2xl"
             />
-            <button id="searchIcon" class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-500">🔍</button>
+            <button id="searchIcon" class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-500">
+                🔍
+            </button>
         </div>
     </header>
 
@@ -49,8 +48,13 @@
         <p class="text-gray-500 italic">Enter a movie title to get started...</p>
     </section>
 
-    <main class="max-w-6xl mx-auto px-6 pb-20">
-        <div id="movieGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"></div>
+       <main class="max-w-6xl mx-auto px-6 pb-20">
+        <div id="movieGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            
+
+        </div>
     </main>
+    <script src="script2.js"></script>
+
 </body>
 </html>
